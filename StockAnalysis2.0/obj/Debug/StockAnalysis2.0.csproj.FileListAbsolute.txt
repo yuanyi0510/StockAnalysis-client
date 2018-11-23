@@ -1,0 +1,12 @@
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\bin\Debug\StockAnalysis2.0.exe
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\bin\Debug\StockAnalysis2.0.pdb
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\bin\Debug\devcomponents.dotnetbar2.dll
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\bin\Debug\devcomponents.dotnetbar2.xml
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2.0.csprojAssemblyReference.cache
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2._0.Form1.resources
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2._0.Properties.Resources.resources
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2.0.csproj.GenerateResource.cache
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2.0.csproj.CoreCompileInputs.cache
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2.0.csproj.CopyComplete
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2.0.exe
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2.0.pdb
