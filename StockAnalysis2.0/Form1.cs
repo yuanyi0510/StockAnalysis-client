@@ -34,12 +34,17 @@ namespace StockAnalysis2._0
         //注册
         private void Register_Click(object sender, EventArgs e)
         {
-
+            Register register = new Register();
+            register.Show();
+            this.Hide();
         }
 
         //登录
         private void buttonX1_Click(object sender, EventArgs e)
         {
+            Main ma = new Main();
+            ma.Show();
+            this.Hide();
 
         }
     }
