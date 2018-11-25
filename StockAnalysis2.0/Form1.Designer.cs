@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.textBoxX1 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.textBoxX2 = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.password = new DevComponents.DotNetBar.Controls.TextBoxX();
             this.RemberPwd = new DevComponents.DotNetBar.Controls.CheckBoxX();
             this.ForgetPwd = new DevComponents.DotNetBar.LabelX();
             this.Register = new DevComponents.DotNetBar.LabelX();
@@ -48,25 +48,25 @@
             this.textBoxX1.Border.Class = "TextBoxBorder";
             this.textBoxX1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.textBoxX1.Location = new System.Drawing.Point(63, 136);
-            this.textBoxX1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.textBoxX1.Margin = new System.Windows.Forms.Padding(2);
             this.textBoxX1.Name = "textBoxX1";
             this.textBoxX1.PreventEnterBeep = true;
             this.textBoxX1.Size = new System.Drawing.Size(199, 21);
             this.textBoxX1.TabIndex = 4;
             // 
-            // textBoxX2
+            // password
             // 
             // 
             // 
             // 
-            this.textBoxX2.Border.Class = "TextBoxBorder";
-            this.textBoxX2.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.textBoxX2.Location = new System.Drawing.Point(63, 180);
-            this.textBoxX2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBoxX2.Name = "textBoxX2";
-            this.textBoxX2.PreventEnterBeep = true;
-            this.textBoxX2.Size = new System.Drawing.Size(199, 21);
-            this.textBoxX2.TabIndex = 5;
+            this.password.Border.Class = "TextBoxBorder";
+            this.password.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
+            this.password.Location = new System.Drawing.Point(63, 180);
+            this.password.Margin = new System.Windows.Forms.Padding(2);
+            this.password.Name = "password";
+            this.password.PreventEnterBeep = true;
+            this.password.Size = new System.Drawing.Size(199, 21);
+            this.password.TabIndex = 5;
             // 
             // RemberPwd
             // 
@@ -187,13 +187,13 @@
             this.Controls.Add(this.ForgetPwd);
             this.Controls.Add(this.RemberPwd);
             this.Controls.Add(this.Logo);
-            this.Controls.Add(this.textBoxX2);
+            this.Controls.Add(this.password);
             this.Controls.Add(this.textBoxX1);
             this.Controls.Add(this.ExitLogin);
             this.Controls.Add(this.labelX2);
             this.Controls.Add(this.UserName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -206,7 +206,7 @@
         private DevComponents.DotNetBar.LabelX labelX2;
         private DevComponents.DotNetBar.LabelX ExitLogin;
         private DevComponents.DotNetBar.Controls.TextBoxX textBoxX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX2;
+        private DevComponents.DotNetBar.Controls.TextBoxX password;
         private DevComponents.DotNetBar.LabelX Logo;
         private DevComponents.DotNetBar.LabelX ForgetPwd;
         private DevComponents.DotNetBar.Controls.CheckBoxX RemberPwd;

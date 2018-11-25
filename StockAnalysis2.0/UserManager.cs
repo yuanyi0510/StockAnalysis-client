@@ -8,26 +8,16 @@ using System.Windows.Forms;
 
 namespace StockAnalysis2._0
 {
-    public partial class Main : Form
+    public partial class UserManager : Form
     {
-        public Main()
+        public UserManager()
         {
             InitializeComponent();
         }
 
-        private void main_Load(object sender, EventArgs e)
+        private void itemPanel1_ItemClick(object sender, EventArgs e)
         {
-           
+
         }
-
-
-
-
-        private void exit_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-
     }
 }

@@ -45,9 +45,16 @@ namespace StockAnalysis2._0
         //登录
         private void buttonX1_Click(object sender, EventArgs e)
         {
-            Main ma = new Main();
-            ma.Show();
-            this.Hide();
+            string username = this.UserName.Text;
+            string pwd = this.password.Text;
+            bool isSuccess = true;
+            if (isSuccess)
+            {
+                Main ma = new Main();
+                ma.Show();
+                this.Hide();
+            }
+            
 
         }
     }
