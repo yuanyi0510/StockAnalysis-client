@@ -12,3 +12,4 @@ D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\o
 D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2.0.pdb
 D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2._0.Register.resources
 D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2._0.Main.resources
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2._0.ForgetPwd.resources

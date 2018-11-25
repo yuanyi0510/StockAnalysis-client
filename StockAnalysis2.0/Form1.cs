@@ -18,6 +18,7 @@ namespace StockAnalysis2._0
         private void ExitLogin_Click(object sender, EventArgs e)
         {
             this.Close();
+            Application.Exit();
         }
 
         //记住密码
@@ -28,7 +29,9 @@ namespace StockAnalysis2._0
         //忘记密码
         private void ForgetPwd_Click(object sender, EventArgs e)
         {
-
+            ForgetPwd forget = new ForgetPwd();
+            forget.Show();
+            this.Hide();
         }
 
         //注册

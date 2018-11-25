@@ -26,7 +26,18 @@ namespace StockAnalysis2._0
         //注册
         private void RegisterUser_Click(object sender, EventArgs e)
         {
-
+            bool isSuccess = true;
+            if (isSuccess)
+            {
+                MessageBox.Show("注册成功！");
+                Form1 login = new Form1();
+                login.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("注册失败！");
+            }
         }
 
         private void Department_Enter(object sender, EventArgs e)
@@ -178,11 +189,6 @@ namespace StockAnalysis2._0
             }
         }
 
-        private void Register_Load(object sender, EventArgs e)
-        {
-           
-
-        }
 
         private void Register_Activated(object sender, EventArgs e)
         {
