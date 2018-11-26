@@ -10,6 +10,7 @@ namespace StockAnalysis2._0
 {
     public partial class Form1 : Form
     {
+        public string userName;
         public Form1()
         {
             InitializeComponent();
@@ -45,11 +46,13 @@ namespace StockAnalysis2._0
         //登录
         private void buttonX1_Click(object sender, EventArgs e)
         {
+            
             string username = this.UserName.Text;
             string pwd = this.password.Text;
             bool isSuccess = true;
             if (isSuccess)
             {
+                this.userName = username;
                 Main ma = new Main();
                 ma.Show();
                 this.Hide();

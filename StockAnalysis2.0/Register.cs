@@ -10,10 +10,20 @@ namespace StockAnalysis2._0
 {
     public partial class Register : Form
     {
+
+        private User u;//修改用户信息
+        private bool flag;//是否为修改
         public Register()
         {
             InitializeComponent();
          
+        }
+        public Register(User user,bool flag)
+        {
+            InitializeComponent();
+            this.u = user;
+            this.flag = flag;
+
         }
 
         private void labelX1_Click(object sender, EventArgs e)
@@ -26,18 +36,41 @@ namespace StockAnalysis2._0
         //注册
         private void RegisterUser_Click(object sender, EventArgs e)
         {
-            bool isSuccess = true;
-            if (isSuccess)
+            if (flag)
             {
-                MessageBox.Show("注册成功！");
-                Form1 login = new Form1();
-                login.Show();
-                this.Close();
+                //修改用户信息
+                bool isSuccess1 = true;
+                if (isSuccess1)
+                {
+                    MessageBox.Show("修改成功！");
+                    UserManager user = new UserManager();
+                    user.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("修改失败！");
+                }
+
             }
             else
             {
-                MessageBox.Show("注册失败！");
+                //注册用户
+                bool isSuccess = true;
+                if (isSuccess)
+                {
+                    MessageBox.Show("注册成功！");
+                    Form1 login = new Form1();
+                    login.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("注册失败！");
+                }
             }
+
+            
         }
 
         private void Department_Enter(object sender, EventArgs e)
@@ -194,6 +227,22 @@ namespace StockAnalysis2._0
         {
 
             this.RegisterDepartment.Focus();
+            if (flag && u!=null)
+            {
+                this.RegisterUser.Text = "修改信息";
+                this.Department.Text = u.UId.ToString();
+                this.Department.ForeColor= Color.Black;
+                this.Dept.Text = u.Dept;
+                this.Dept.ForeColor = Color.Black;
+                this.UserName.Text = u.UserName;
+                this.UserName.ForeColor = Color.Black;
+                this.Password.Text = u.Pwd;
+                this.Password.ForeColor = Color.Black;
+                this.Tel.Text = u.Tel;
+                this.Tel.ForeColor = Color.Black;
+                this.ConfirmPwd.Text = u.Pwd;
+                this.ConfirmPwd.ForeColor = Color.Black;
+            }
         }
     }
 }

@@ -17,7 +17,8 @@ namespace StockAnalysis2._0
 
         private void main_Load(object sender, EventArgs e)
         {
-           
+            Form1 f1 = new Form1();
+            this.exit.Text = f1.userName;
         }
 
 
@@ -28,6 +29,11 @@ namespace StockAnalysis2._0
             Application.Exit();
         }
 
-
+        private void buttonX2_Click(object sender, EventArgs e)
+        {
+            UserManager userManager = new UserManager();
+            userManager.Show();
+            this.Close();
+        }
     }
 }
