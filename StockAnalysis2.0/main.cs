@@ -20,15 +20,14 @@ namespace StockAnalysis2._0
            
         }
 
-        //退出登陆
-        private void username_Click(object sender, EventArgs e)
+
+
+
+        private void exit_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void labelX2_Click(object sender, EventArgs e)
-        {
 
-        }
     }
 }
