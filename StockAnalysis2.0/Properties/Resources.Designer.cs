@@ -83,6 +83,16 @@ namespace StockAnalysis2._0.Properties {
         /// <summary>
         ///   查找 System.Drawing.Bitmap 类型的本地化资源。
         /// </summary>
+        internal static System.Drawing.Bitmap cow {
+            get {
+                object obj = ResourceManager.GetObject("cow", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
         internal static System.Drawing.Bitmap department {
             get {
                 object obj = ResourceManager.GetObject("department", resourceCulture);
@@ -96,6 +106,16 @@ namespace StockAnalysis2._0.Properties {
         internal static System.Drawing.Bitmap department1 {
             get {
                 object obj = ResourceManager.GetObject("department1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap exit {
+            get {
+                object obj = ResourceManager.GetObject("exit", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -156,6 +176,26 @@ namespace StockAnalysis2._0.Properties {
         internal static System.Drawing.Bitmap pwd1 {
             get {
                 object obj = ResourceManager.GetObject("pwd1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap search {
+            get {
+                object obj = ResourceManager.GetObject("search", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   查找 System.Drawing.Bitmap 类型的本地化资源。
+        /// </summary>
+        internal static System.Drawing.Bitmap serarch {
+            get {
+                object obj = ResourceManager.GetObject("serarch", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
