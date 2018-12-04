@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="devcomponents.dotnetbar.charts, Version=14.0.0.15, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="devcomponents.dotnetbar.layout, Version=14.0.0.15, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
+    <Reference Include="devcomponents.dotnetbar.supergrid, Version=14.0.0.15, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="devcomponents.dotnetbar2, Version=14.0.0.15, Culture=neutral, PublicKeyToken=c39c3242a43eee2b, processorArchitecture=MSIL" />
     <Reference Include="devcomponents.treegx, Version=14.0.0.15, Culture=neutral, PublicKeyToken=cfcbd7476b2389d1, processorArchitecture=MSIL" />
     <Reference Include="System" />
@@ -82,6 +83,12 @@
     <Compile Include="Register.Designer.cs">
       <DependentUpon>Register.cs</DependentUpon>
     </Compile>
+    <Compile Include="StockDetail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StockDetail.Designer.cs">
+      <DependentUpon>StockDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="StockManage.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,12 +125,321 @@
     <EmbeddedResource Include="Register.resx">
       <DependentUpon>Register.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StockDetail.resx">
+      <DependentUpon>StockDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="StockManage.resx">
       <DependentUpon>StockManage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserManager.resx">
       <DependentUpon>UserManager.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.BlankExpandableObjectConverter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.CellInfoWindow.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.CellRange.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.CheckDisplay.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.ColumnGroupHeader.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.ColumnGroupHeaderCollection.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.ConvertValue.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.CustomFilter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.DataBinder.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.DisplayRange.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.EditorPanel.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.EditTypeConverter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.EEval.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.EmptyFilterOp.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.ExpandDisplay.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.ExpressionColors.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.ExpressionColorsConverter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.FilterDateTimePicker.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.FilterEval.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.FilterPanel.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.FilterPopup+PfnReset.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.FilterPopup.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.FilterPopupItem.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.FilterScan.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.FilterUserData.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.FloatWindow.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GetNewGridColumn.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridActiveGridChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridAfterCheckEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridAfterCollapseEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridAfterExpandEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridBeforeCheckEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridBeforeCollapseEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridBeforeExpandEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridBubbleBarEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridButtonEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridButtonXEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCancelEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCaption.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCell.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellActivatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellActivatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellCollection.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellDoubleClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellInfoEnterEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellInfoLeaveEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellMouseEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellUserFunctionEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellValidatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellValidatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCellValueChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCheckBoxEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCheckBoxXEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCloseEditEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColorPickerEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumn.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnCollection.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnGroupedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnGroupHeaderClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnGroupHeaderDoubleClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnGroupHeaderMarkupLinkClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnGroupHeaderResizedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnHeader.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnHeaderClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnHeaderDoubleClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnHeaderEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnHeaderMarkupLinkClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridColumnHeaderMouseEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridComboBoxExEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridComboTreeEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridCompareElementsEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridConfigureGroupBoxEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridContainer.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridDataBindingCompleteEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridDataBindingStartEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridDataErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridDataFilteringCompleteEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridDataFilteringStartEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridDateTimeInputEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridDateTimePickerEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridDoubleInputEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridDoubleIntInputEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridEditEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridElement.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterBeginEditEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterCancelEditEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterColumnErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterEditValueChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterEndEditEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterHeaderClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterHelpClosingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterHelpOpeningEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterItemsLoadedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterLoadItemsEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterLoadUserDataEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterPopupClosingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterPopupLoadedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterPopupLoadEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterPopupOpeningEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterPopupValueChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterRowErrorEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterStoreUserDataEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFilterUserFunctionEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridFooter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGaugeEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetCellFormattedValueEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetCellRangeFormattedValueEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetCellRangesEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetCellStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetCellToolTipEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetCellValueEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetColumnGroupHeaderStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetColumnGroupHeaderToolTipEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetColumnHeaderRowHeaderStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetColumnHeaderStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetColumnHeaderToolTipEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetDetailRowHeightEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetDisplayRangesEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetEditorEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetFilterColumnHeaderStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetFilterEditTypeEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetFilterRowStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetGroupDetailRowsEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetGroupHeaderStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetGroupIdEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetMergedCellStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetPanelStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetRendererEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetRowCellStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetRowHeaderStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetRowHeaderTextEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetRowStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGetTextRowStyleEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGroup.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGroupBox.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGroupByRow.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGroupChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGroupHeaderClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridGroupHeaderDoubleClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridHeader.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridImageEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridInitEditContextEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridIntegerInputEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridIpAddressInputEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridItemDragEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridItemsCollection.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridLabelEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridLabelXEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridLayoutInfo.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridLayoutStateInfo.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridMaskedTextBoxEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridMicroChartEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridNoRowsMarkupLinkClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridNumericUpDownEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPanel.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPlayingSoundEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPostRenderCellEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPostRenderColumnGroupHeaderEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPostRenderColumnHeaderEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPostRenderFilterPopupGripBarEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPostRenderFilterRowEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPostRenderGroupBoxConnectorEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPostRenderGroupBoxEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPostRenderRowEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPostRenderTextRowEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPreRenderCellEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPreRenderColumnGroupHeaderEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPreRenderColumnHeaderEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPreRenderFilterPopupGripBarEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPreRenderFilterRowEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPreRenderGroupBoxConnectorEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPreRenderGroupBoxEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPreRenderRowEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPreRenderTextRowEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridPreviewKeyDownEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridProgressBarXEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRadialMenuEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRatingStarEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRefreshFilterEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRenderInfo.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRow.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowActivatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowActivatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowAddedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowAddingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowCancelEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowDeletedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowDeletingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowDoubleClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowHeaderClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowHeaderDoubleClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowInfoEnterEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowInfoLeaveEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowLoadedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowMouseEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowMovedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowMovingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowRestoredEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowRestoringEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowSetDefaultValuesEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowsPurgingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowValidatedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridRowValidatingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridScrollEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridSelectionChangingEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridSliderEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridSwitchButtonEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridTextBoxDropDownEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridTextBoxXEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridTextRow.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridTextRowEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridTextRowMarkupLinkClickEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridTitle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridTrackBarEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridUpdateCellDisplayRangesEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridVirtualRowEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GridVirtualRows.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.GripRenderer.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.IGridCellConvertTo.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.IGridCellEditControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.IGridCellEditorFocus.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.IsVisibleToSuperGrid.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.PopupControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.PopupDropDown.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.PostRenderGripBarEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.PreRenderGripBarEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Primitives.INotifyCollectionChanged.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Primitives.NotifyCollectionChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Primitives.NotifyCollectionChangedEventHandler.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Primitives.SymbolDef.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Primitives.SymbolDefConvertor.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Primitives.SymbolDefEditor.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.SampleExpr.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.SelectedElementCollection.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.SelectedElements.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.SelectedRange.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.BackColorBlend.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.BackColorBlendConvertor.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.Background.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.BackgroundConvertor.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.BackgroundEditor.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.BaseRowHeaderVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.BaseTreeButtonVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.BaseVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.BorderColor.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.BorderColorConverter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.BorderPattern.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.CellVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.CellVisualStyles.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.ColumnHeaderRowVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.ColumnHeaderRowVisualStyles.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.ColumnHeaderVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.ColumnHeaderVisualStyles.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.DefaultVisualStyles.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.FilterColumnHeaderVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.FilterColumnHeaderVisualStyles.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.FilterRowVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.FilterRowVisualStyles.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.GridPanelVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.GroupByVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.GroupByVisualStyles.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.GroupHeaderVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.GroupHeaderVisualStyles.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.MetroStyleFactory.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.Office2010BlackStyleFactory.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.Office2010BlueStyleFactory.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.Office2010SilverStyleFactory.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.Padding.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.PaddingTypeConverter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.RowHeaderVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.RowVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.RowVisualStyles.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.TextRowVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.TextRowVisualStyles.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.Thickness.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.ThicknessTypeConverter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.TreeButtonVisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.VisualPropertyChangedEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.VisualStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.VisualStyleFactory.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.VisualStylesConverter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.Style.VisualStylesTable.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.SuperGrid.Rtf.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.SuperGridControl.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.TreeDisplay.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.UserFilterData.datasource" />
+    <None Include="Properties\DataSources\DevComponents.DotNetBar.SuperGrid.ValueTypeConverter.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.BlockLayoutManager.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.HyperlinkStyle.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.IBlock.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.IBlockExtended.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.IContentLayout.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.LayoutManagerLayoutEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.LayoutManagerLayoutEventHandler.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.LayoutManagerPositionEventArgs.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.LayoutManagerPositionEventHandler.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.MarkupSettings.datasource" />
+    <None Include="Properties\DataSources\DevComponents.SuperGrid.TextMarkup.SerialContentLayoutManager.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -195,6 +511,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\market.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock-logo1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

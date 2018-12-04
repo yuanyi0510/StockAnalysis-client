@@ -28,11 +28,32 @@ namespace StockAnalysis2._0
         {
             Application.Exit();
         }
-
+        //进入账户管理界面
         private void buttonX2_Click(object sender, EventArgs e)
         {
             UserManager userManager = new UserManager();
             userManager.Show();
+            this.Close();
+        }
+        //进入标签管理
+        private void buttonX3_Click(object sender, EventArgs e)
+        {
+            LabelManage labelManage = new LabelManage();
+            labelManage.Show();
+            this.Close();
+        }
+        //进入市场管理
+        private void buttonX4_Click(object sender, EventArgs e)
+        {
+            MarketManage marketManage = new MarketManage();
+            marketManage.Show();
+            this.Close();
+        }
+        //进入股票管理
+        private void buttonX5_Click(object sender, EventArgs e)
+        {
+            StockManage stockManage = new StockManage();
+            stockManage.Show();
             this.Close();
         }
     }

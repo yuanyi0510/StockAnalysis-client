@@ -26,6 +26,18 @@ namespace StockAnalysis2._0
             this.Slabel.Click += Slabel_Click;
             this.Smarket.Click += Smarket_Click;
             this.Saccount.Click += Saccount_Click;
+
+            //test
+            List<Stock> students = new List<Stock>();
+            Stock hat = new Stock(1, "12", "Male");
+            Stock peter = new Stock(2, "14", "Male");
+            Stock dell = new Stock(3, "16", "Male");
+            Stock anne = new Stock(3, "19", "Female");
+            students.Add(hat);
+            students.Add(peter);
+            students.Add(dell);
+            students.Add(anne);
+            this.dataGridViewX1.DataSource = students;
         }
 
         private void Saccount_Click(object sender, EventArgs e)
@@ -61,9 +73,28 @@ namespace StockAnalysis2._0
             Application.Exit();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void dataGridViewX1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-
+            MessageBox.Show("您点击了");
         }
+    }
+
+    public class Stock
+    {
+        private int code;
+        private string name;
+        private string market;
+
+        public Stock(int code, string name, string market)
+        {
+            this.code = code;
+            this.name = name;
+            this.market = market;
+        }
+
+        public int Code { get => code; set => code = value; }
+        public string Name { get => name; set => name = value; }
+        public string Market { get => market; set => market = value; }
+
     }
 }

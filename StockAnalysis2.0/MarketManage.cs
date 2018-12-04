@@ -72,5 +72,10 @@ namespace StockAnalysis2._0
             this.Close();
         }
 
+        private void listViewEx1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

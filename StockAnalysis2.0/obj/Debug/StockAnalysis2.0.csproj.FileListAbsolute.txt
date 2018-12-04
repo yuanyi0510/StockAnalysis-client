@@ -20,3 +20,8 @@ D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\b
 D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2._0.MarketManage.resources
 D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2._0.LabelManage.resources
 D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2._0.StockManage.resources
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\bin\Debug\devcomponents.dotnetbar.supergrid.dll
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\bin\Debug\DevComponents.Instrumentation.dll
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\bin\Debug\devcomponents.dotnetbar.supergrid.xml
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\bin\Debug\DevComponents.Instrumentation.xml
+D:\浙大工作\股票分析系统\客户端\StockAnalysis2.0\StockAnalysis2.0\obj\Debug\StockAnalysis2._0.StockDetail.resources

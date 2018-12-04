@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.button1 = new System.Windows.Forms.Button();
             this.radialMenu1 = new DevComponents.DotNetBar.RadialMenu();
             this.Sexit = new DevComponents.DotNetBar.RadialMenuItem();
             this.Smain = new DevComponents.DotNetBar.RadialMenuItem();
@@ -39,7 +40,6 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.userNameL = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.button1 = new System.Windows.Forms.Button();
             this.panelEx1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,8 +55,9 @@
             this.panelEx1.DisabledBackColor = System.Drawing.Color.Empty;
             this.panelEx1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelEx1.Location = new System.Drawing.Point(0, 0);
+            this.panelEx1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panelEx1.Name = "panelEx1";
-            this.panelEx1.Size = new System.Drawing.Size(784, 411);
+            this.panelEx1.Size = new System.Drawing.Size(1176, 616);
             this.panelEx1.Style.Alignment = System.Drawing.StringAlignment.Center;
             this.panelEx1.Style.BackColor1.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground;
             this.panelEx1.Style.BackColor2.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelBackground2;
@@ -65,6 +66,17 @@
             this.panelEx1.Style.ForeColor.ColorSchemePart = DevComponents.DotNetBar.eColorSchemePart.PanelText;
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 8;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(560, 334);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(112, 34);
+            this.button1.TabIndex = 4;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // radialMenu1
             // 
@@ -79,9 +91,10 @@
             this.Smarket,
             this.Stock,
             this.Saccount});
-            this.radialMenu1.Location = new System.Drawing.Point(724, 9);
+            this.radialMenu1.Location = new System.Drawing.Point(1086, 14);
+            this.radialMenu1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.radialMenu1.Name = "radialMenu1";
-            this.radialMenu1.Size = new System.Drawing.Size(28, 28);
+            this.radialMenu1.Size = new System.Drawing.Size(42, 42);
             this.radialMenu1.Symbol = "";
             this.radialMenu1.SymbolSize = 13F;
             this.radialMenu1.TabIndex = 3;
@@ -130,9 +143,10 @@
             // 
             this.labelX3.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX3.FontBold = true;
-            this.labelX3.Location = new System.Drawing.Point(703, 14);
+            this.labelX3.Location = new System.Drawing.Point(1054, 21);
+            this.labelX3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX3.Name = "labelX3";
-            this.labelX3.Size = new System.Drawing.Size(15, 23);
+            this.labelX3.Size = new System.Drawing.Size(22, 34);
             this.labelX3.TabIndex = 2;
             this.labelX3.Text = "|";
             // 
@@ -142,9 +156,10 @@
             // 
             // 
             this.userNameL.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.userNameL.Location = new System.Drawing.Point(595, 14);
+            this.userNameL.Location = new System.Drawing.Point(892, 21);
+            this.userNameL.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.userNameL.Name = "userNameL";
-            this.userNameL.Size = new System.Drawing.Size(104, 23);
+            this.userNameL.Size = new System.Drawing.Size(156, 34);
             this.userNameL.TabIndex = 1;
             this.userNameL.Text = "用户名";
             this.userNameL.TextAlignment = System.Drawing.StringAlignment.Center;
@@ -157,30 +172,22 @@
             this.labelX1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.labelX1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.labelX1.Image = global::StockAnalysis2._0.Properties.Resources.security;
-            this.labelX1.Location = new System.Drawing.Point(3, 0);
+            this.labelX1.Location = new System.Drawing.Point(4, 0);
+            this.labelX1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.labelX1.Name = "labelX1";
-            this.labelX1.Size = new System.Drawing.Size(129, 43);
+            this.labelX1.Size = new System.Drawing.Size(194, 64);
             this.labelX1.TabIndex = 0;
-            this.labelX1.Text = "账号安全";
+            this.labelX1.Text = "标签管理";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(373, 223);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LabelManage
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 18F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(784, 411);
+            this.ClientSize = new System.Drawing.Size(1176, 616);
             this.Controls.Add(this.panelEx1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LabelManage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LabelManage";

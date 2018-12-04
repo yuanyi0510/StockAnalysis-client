@@ -28,34 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new string[] {
-            "1",
-            "沪深",
-            "234234",
-            "修改",
-            "删除"}, 0);
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem(new string[] {
-            "2",
-            "港股",
-            "2342435346546"}, 0);
-            System.Windows.Forms.ListViewItem listViewItem3 = new System.Windows.Forms.ListViewItem(new string[] {
-            "3",
-            "美股",
-            "23442"}, 0);
-            System.Windows.Forms.ListViewItem listViewItem4 = new System.Windows.Forms.ListViewItem(new string[] {
-            "4",
-            "基金",
-            "34324324"}, 0);
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MarketManage));
             this.panelEx1 = new DevComponents.DotNetBar.PanelEx();
+            this.superGridControl1 = new DevComponents.DotNetBar.SuperGrid.SuperGridControl();
+            this.gridColumn1 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn2 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn3 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn4 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridColumn5 = new DevComponents.DotNetBar.SuperGrid.GridColumn();
+            this.gridRow1 = new DevComponents.DotNetBar.SuperGrid.GridRow();
+            this.gridCell1 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            this.gridCell2 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            this.gridCell3 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            this.gridCell4 = new DevComponents.DotNetBar.SuperGrid.GridCell();
+            this.gridCell5 = new DevComponents.DotNetBar.SuperGrid.GridCell();
             this.Add = new DevComponents.DotNetBar.ButtonX();
-            this.listViewEx1 = new DevComponents.DotNetBar.Controls.ListViewEx();
-            this.ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.name = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.num = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.cal = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.del = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.radialMenu1 = new DevComponents.DotNetBar.RadialMenu();
             this.Sexit = new DevComponents.DotNetBar.RadialMenuItem();
             this.Smain = new DevComponents.DotNetBar.RadialMenuItem();
@@ -66,7 +52,6 @@
             this.labelX3 = new DevComponents.DotNetBar.LabelX();
             this.usernameL = new DevComponents.DotNetBar.LabelX();
             this.labelX1 = new DevComponents.DotNetBar.LabelX();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.panelEx1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -74,8 +59,8 @@
             // 
             this.panelEx1.CanvasColor = System.Drawing.SystemColors.Control;
             this.panelEx1.ColorSchemeStyle = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
+            this.panelEx1.Controls.Add(this.superGridControl1);
             this.panelEx1.Controls.Add(this.Add);
-            this.panelEx1.Controls.Add(this.listViewEx1);
             this.panelEx1.Controls.Add(this.radialMenu1);
             this.panelEx1.Controls.Add(this.labelX3);
             this.panelEx1.Controls.Add(this.usernameL);
@@ -94,6 +79,76 @@
             this.panelEx1.Style.GradientAngle = 90;
             this.panelEx1.TabIndex = 4;
             // 
+            // superGridControl1
+            // 
+            this.superGridControl1.FilterExprColors.SysFunction = System.Drawing.Color.DarkRed;
+            this.superGridControl1.Location = new System.Drawing.Point(89, 83);
+            this.superGridControl1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.superGridControl1.Name = "superGridControl1";
+            // 
+            // 
+            // 
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn1);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn2);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn3);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn4);
+            this.superGridControl1.PrimaryGrid.Columns.Add(this.gridColumn5);
+            this.superGridControl1.PrimaryGrid.Rows.Add(this.gridRow1);
+            this.superGridControl1.Size = new System.Drawing.Size(354, 165);
+            this.superGridControl1.TabIndex = 6;
+            this.superGridControl1.Text = "superGridControl1";
+            // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Name = "ID";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Name = "名称";
+            // 
+            // gridColumn3
+            // 
+            this.gridColumn3.Name = "持股数量";
+            // 
+            // gridColumn4
+            // 
+            this.gridColumn4.Name = "操作";
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Name = "";
+            // 
+            // gridRow1
+            // 
+            this.gridRow1.Cells.Add(this.gridCell1);
+            this.gridRow1.Cells.Add(this.gridCell2);
+            this.gridRow1.Cells.Add(this.gridCell3);
+            this.gridRow1.Cells.Add(this.gridCell4);
+            this.gridRow1.Cells.Add(this.gridCell5);
+            this.gridRow1.Expanded = true;
+            // 
+            // gridCell1
+            // 
+            this.gridCell1.Value = "1";
+            // 
+            // gridCell2
+            // 
+            this.gridCell2.Value = "沪深";
+            // 
+            // gridCell3
+            // 
+            this.gridCell3.Value = "123213";
+            // 
+            // gridCell4
+            // 
+            this.gridCell4.RenderType = typeof(DevComponents.DotNetBar.SuperGrid.GridButtonXEditControl);
+            this.gridCell4.Value = "修改";
+            // 
+            // gridCell5
+            // 
+            this.gridCell5.RenderType = typeof(DevComponents.DotNetBar.SuperGrid.GridButtonXEditControl);
+            this.gridCell5.Value = "删除";
+            // 
             // Add
             // 
             this.Add.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
@@ -104,57 +159,6 @@
             this.Add.Style = DevComponents.DotNetBar.eDotNetBarStyle.StyleManagerControlled;
             this.Add.TabIndex = 5;
             this.Add.Text = "添加";
-            // 
-            // listViewEx1
-            // 
-            // 
-            // 
-            // 
-            this.listViewEx1.Border.Class = "ListViewBorder";
-            this.listViewEx1.Border.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.listViewEx1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.ID,
-            this.name,
-            this.num,
-            this.cal,
-            this.del});
-            this.listViewEx1.DisabledBackColor = System.Drawing.Color.Empty;
-            this.listViewEx1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1,
-            listViewItem2,
-            listViewItem3,
-            listViewItem4});
-            this.listViewEx1.Location = new System.Drawing.Point(61, 64);
-            this.listViewEx1.Name = "listViewEx1";
-            this.listViewEx1.Size = new System.Drawing.Size(465, 251);
-            this.listViewEx1.SmallImageList = this.imageList1;
-            this.listViewEx1.TabIndex = 4;
-            this.listViewEx1.UseCompatibleStateImageBehavior = false;
-            this.listViewEx1.View = System.Windows.Forms.View.Details;
-            // 
-            // ID
-            // 
-            this.ID.Text = "ID";
-            this.ID.Width = 67;
-            // 
-            // name
-            // 
-            this.name.Text = "名称";
-            this.name.Width = 98;
-            // 
-            // num
-            // 
-            this.num.Text = "交易数量";
-            this.num.Width = 178;
-            // 
-            // cal
-            // 
-            this.cal.Text = "操作";
-            this.cal.Width = 59;
-            // 
-            // del
-            // 
-            this.del.Text = "";
             // 
             // radialMenu1
             // 
@@ -254,12 +258,6 @@
             this.labelX1.Text = "市场管理";
             this.labelX1.TextAlignment = System.Drawing.StringAlignment.Center;
             // 
-            // imageList1
-            // 
-            this.imageList1.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList1.ImageStream")));
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            this.imageList1.Images.SetKeyName(0, "marketlogo.png");
-            // 
             // MarketManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -289,13 +287,18 @@
         private DevComponents.DotNetBar.RadialMenuItem Smarket;
         private DevComponents.DotNetBar.RadialMenuItem Stock;
         private DevComponents.DotNetBar.RadialMenuItem Saccount;
-        private DevComponents.DotNetBar.Controls.ListViewEx listViewEx1;
-        private System.Windows.Forms.ColumnHeader ID;
-        private System.Windows.Forms.ColumnHeader name;
-        private System.Windows.Forms.ColumnHeader num;
         private DevComponents.DotNetBar.ButtonX Add;
-        private System.Windows.Forms.ColumnHeader cal;
-        private System.Windows.Forms.ColumnHeader del;
-        private System.Windows.Forms.ImageList imageList1;
+        private DevComponents.DotNetBar.SuperGrid.SuperGridControl superGridControl1;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn1;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn2;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn3;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn4;
+        private DevComponents.DotNetBar.SuperGrid.GridColumn gridColumn5;
+        private DevComponents.DotNetBar.SuperGrid.GridRow gridRow1;
+        private DevComponents.DotNetBar.SuperGrid.GridCell gridCell1;
+        private DevComponents.DotNetBar.SuperGrid.GridCell gridCell2;
+        private DevComponents.DotNetBar.SuperGrid.GridCell gridCell3;
+        private DevComponents.DotNetBar.SuperGrid.GridCell gridCell4;
+        private DevComponents.DotNetBar.SuperGrid.GridCell gridCell5;
     }
 }
